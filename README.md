@@ -1,2 +1,2 @@
-# consent-play
-The website for Consent &amp; Play, a multimedia publication for new ways of interacting.
+# Consent& Play
+Consent &amp; Play is a multimedia publication for better ways of interacting.
