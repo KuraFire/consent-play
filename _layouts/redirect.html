@@ -4,10 +4,36 @@
 <link rel="canonical" href="{{ page.redirect_to }}"/>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="refresh" content="0;url={{ page.redirect_to }}" />
+<style media="screen">
+  body {
+    font: 16px/20px "Source Sans Pro", Helvetica, Verdana, sans-serif;
+    padding: 10% 20%;
+    text-align: center;
+    color: #202835;
+    opacity: 0;
+    transition: opacity 1s ease-in 2s;
+  }
+  .visible {
+    opacity: 1;
+  }
+  a {
+    color: #1982fa;
+  }
+  a:focus,
+  a:hover {
+    color: #fa1982;
+  }
+</style>
 </head>
-<body>
+<body class="visible">
     <h1>Redirecting...</h1>
-      <a href="{{ page.redirect_to }}">Click here if you are not redirected.<a>
-      <script>location='{{ page.redirect_to }}'</script>
+    <p><a href="{{ page.redirect_to }}">Go to {{ page.redirect_to }}</a></p>
+    <script>
+      location='{{ page.redirect_to }}';
+      document.body.className = "";
+      window.onload = function() {
+        document.body.classList.add('visible');
+      }
+    </script>
 </body>
 </html>
